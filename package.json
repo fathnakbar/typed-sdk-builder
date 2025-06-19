@@ -1,6 +1,6 @@
 {
   "name": "typed-sdk-builder",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "A lightweight, zero-dependency TypeScript library for creating a fully-typed, configuration-based REST API client that handles authentication failures automatically.",
   "type": "module",
   "main": "./dist/cjs/index.cjs",
