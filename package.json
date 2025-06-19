@@ -47,12 +47,12 @@
     "helper",
     "interceptor"
   ],
-  "author": "YOUR_NAME <your.email@example.com>",
+  "author": "Muhammad Fathan <fathanakbar@anywork.dev>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/YOUR_USERNAME/typed-sdk-builder/issues"
+    "url": "https://github.com/fathnakbar/typed-sdk-builder/issues"
   },
-  "homepage": "https://github.com/YOUR_USERNAME/typed-sdk-builder#readme",
+  "homepage": "https://github.com/fathnakbar/typed-sdk-builder",
   "devDependencies": {
     "rimraf": "^5.0.7",
     "typescript": "^5.4.5"

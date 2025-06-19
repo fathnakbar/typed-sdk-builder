@@ -1,0 +1,26 @@
+{
+    "name": "sdk-builder-basic-node-example",
+    "version": "1.0.0",
+    "private": true,
+    "description": "A basic Node.js example for the typed-sdk-builder library.",
+    "main": "index.js",
+    "scripts": {
+      "start:server": "ts-node mockApi.ts",
+      "start:client": "ts-node index.ts",
+      "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+      "cors": "^2.8.5",
+      "express": "^4.19.2"
+    },
+    "devDependencies": {
+      "@types/cors": "^2.8.17",
+      "@types/express": "^4.17.21",
+      "@types/node": "^20.14.2",
+      "ts-node": "^10.9.2",
+      "typescript": "^5.4.5"
+    }
+  }
+  
