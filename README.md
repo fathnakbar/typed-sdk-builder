@@ -1,8 +1,13 @@
-# Typed SDK Builder
+<div align="left">
 
-[](https://www.google.com/search?q=https://www.npmjs.com/package/typed-sdk-builder)
-[](https://www.google.com/search?q=https://travis-ci.com/your-username/typed-sdk-builder)
-[](https://opensource.org/licenses/MIT)
+[![npm version](https://img.shields.io/npm/v/axios.svg?style=flat-square)](https://www.npmjs.org/package/typed-sdk-builder)
+![GitHub License](https://img.shields.io/github/license/fathnakbar/typed-sdk-builder)
+[![Bundle Size](https://img.shields.io/bundlephobia/minzip/typed-sdk-builder?style=flat-square)](https://bundlephobia.com/package/typed-sdk-builder@1.0.3)
+[![Dependencies](https://img.shields.io/badge/dependencies-0-brightgreen?style=flat-square)](https://github.com/fathnakbar/typed-sdk-builder/blob/main/package.json)
+
+</div>
+
+# Typed SDK Builder
 
 A lightweight, zero-dependency TypeScript library for creating a fully-typed, configuration-based REST API client that handles authentication failures automatically, so you don't have to.
 
