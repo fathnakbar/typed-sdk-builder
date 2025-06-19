@@ -1,0 +1,54 @@
+{
+  "name": "typed-sdk-builder",
+  "version": "1.0.0",
+  "description": "A lightweight, zero-dependency TypeScript library for creating a fully-typed, configuration-based REST API client that handles authentication failures automatically.",
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "clean": "rimraf dist",
+    "build": "npm run clean && tsc",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prepublishOnly": "npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/YOUR_USERNAME/typed-sdk-builder.git"
+  },
+  "keywords": [
+    "typescript",
+    "sdk",
+    "builder",
+    "rest",
+    "api",
+    "fetch",
+    "client",
+    "typed",
+    "auth",
+    "token",
+    "helper",
+    "interceptor"
+  ],
+  "author": "YOUR_NAME <your.email@example.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/YOUR_USERNAME/typed-sdk-builder/issues"
+  },
+  "homepage": "https://github.com/YOUR_USERNAME/typed-sdk-builder#readme",
+  "devDependencies": {
+    "rimraf": "^5.0.7",
+    "typescript": "^5.4.5"
+  }
+}
