@@ -161,4 +161,4 @@ Every fetch call returns a `Promise` that resolves to a `CustomApiResponse` obje
 
 ## License
 
-This project is licensed under the MIT License.
+This project is licensed under GPL-3.0 license.
