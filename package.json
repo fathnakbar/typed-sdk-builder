@@ -1,25 +1,31 @@
 {
   "name": "typed-sdk-builder",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A lightweight, zero-dependency TypeScript library for creating a fully-typed, configuration-based REST API client that handles authentication failures automatically.",
-  "main": "dist/index.js",
-  "module": "dist/index.mjs",
-  "types": "dist/index.d.ts",
+  "type": "module",
+  "main": "./dist/cjs/index.cjs",
+  "module": "./dist/esm/index.js",
+  "types": "./dist/types/index.d.ts",
   "exports": {
     ".": {
-      "import": "./dist/index.mjs",
-      "require": "./dist/index.js",
-      "types": "./dist/index.d.ts"
+      "import": {
+        "types": "./dist/types/index.d.ts",
+        "default": "./dist/esm/index.js"
+      },
+      "require": {
+        "types": "./dist/types/index.d.ts",
+        "default": "./dist/cjs/index.cjs"
+      }
     }
   },
   "files": [
-    "dist",
-    "README.md",
-    "LICENSE"
+    "dist"
   ],
   "scripts": {
     "clean": "rimraf dist",
-    "build": "npm run clean && tsc",
+    "build:esm": "tsc -p tsconfig.esm.json",
+    "build:cjs": "tsc -p tsconfig.cjs.json",
+    "build": "npm run clean && npm run build:esm && npm run build:cjs",
     "test": "echo \"Error: no test specified\" && exit 1",
     "prepublishOnly": "npm run build"
   },
