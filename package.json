@@ -48,7 +48,7 @@
     "interceptor"
   ],
   "author": "Muhammad Fathan <fathanakbar@anywork.dev>",
-  "license": "MIT",
+  "license": "GPL-3.0",
   "bugs": {
     "url": "https://github.com/fathnakbar/typed-sdk-builder/issues"
   },
