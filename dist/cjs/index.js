@@ -276,8 +276,11 @@ class SDKBuilder {
         }
         const sessionData = {};
         // Common session/token keys to look for. Customize as needed.
-        const keysToFetch = ['token', 'access_token', 'user_data', 'sessionToken', 'refreshToken'];
-        for (const key of keysToFetch) {
+        // const keysToFetch = ['token', 'access_token', 'user_data', 'sessionToken', 'refreshToken'];
+        for (let i = 0; i < localStorage.length; i++) {
+            const key = localStorage.key(i);
+            if (key == null)
+                continue;
             const item = localStorage.getItem(key);
             if (item !== null) {
                 try {
