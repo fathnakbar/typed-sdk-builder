@@ -35,6 +35,7 @@ This means you can call any API endpoint directly without worrying about the tok
   * **Fully-Typed Client:** Generates a typed `fetch` client that mirrors your endpoint configuration, providing excellent autocompletion and type-safety.
   * **Automatic Payload Handling:** Intelligently handles `JSON` bodies, `FormData` for file uploads, and URL query parameters.
   * **Zero Dependencies:** Clean, modern TypeScript code with no external packages.
+  * **Simple Authorization:** Built-in support for adding authorization headers to requests with minimal configuration.
 
 ## Installation
 
@@ -138,6 +139,41 @@ async function login() {
     }
 }
 ```
+
+
+### 4\. Authorization with Token
+
+After successful login, the authentication token can be stored using the `api.store()` method by passing an object with `token` or `access_token` as the key. However, it is highly recommended to implement server-side cookies with `HttpOnly` enabled, as this approach provides enhanced security and is managed automatically by the browser.
+
+```typescript
+// Example of using token for authentication
+const token = 'your-jwt-token-here';
+api.store({ token });
+
+// Or using access_token
+const accessToken = 'your-access-token-here';
+api.store({ access_token: accessToken });
+
+// After storing the token, all requests will automatically include the Authorization header
+const userProfile = await api.fetch.user.profile.get();
+// Request will be sent with header: Authorization: Bearer your-jwt-token-here
+
+// To logout, remove token from storage
+api.store({ token: null });
+// or clear all persistent data
+api.clearAllPersistentData();
+```
+
+
+### 5\. Storing Objects and Complex Data
+
+The `api.store()` method can handle various data types including objects, arrays, and primitive values. Objects are automatically serialized to JSON when stored and deserialized when retrieved.
+
+
+
+
+
+
 
 ## API Reference
 
